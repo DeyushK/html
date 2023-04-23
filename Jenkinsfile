@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git credentialsId: '<your-github-credentials>', url: '<your-github-repo-url>'
+        git credentialsId: 'DeyushK', url: 'https://github.com/DeyushK/html/'
       }
     }
     stage('Deploy') {
       steps {
-        bat "\"C:\\xampp\\xampp_stop.exe\""
-        bat "xcopy /Y /S \"${WORKSPACE}\" \"C:\\xampp\\htdocs\\\""
-        bat "\"C:\\xampp\\xampp_start.exe\""
+        bat "\"E:\\xampp\\xampp_stop.exe\""
+        bat "xcopy /Y /S \"${WORKSPACE}\" \"E:\\xampp\\htdocs\\\""
+        bat "\"E:\\xampp\\xampp_start.exe\""
       }
     }
   }
