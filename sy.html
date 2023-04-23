@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src='https://cdn.jsdelivr.net/npm/@master/style'></script>
+<script src='https://cdn.jsdelivr.net/npm/@master/styles'></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+#m{
+  position: relative;
+  top:300px;
+  min-width: 10%; 
+  min-height: 10%;
+}
+
+.content {
+  position: relative;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #f1f1f1;
+  height: fit-content;
+  width: 100%;
+  padding: 20px;
+}
+
+
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="static/bg.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+  <div class="topnav" id="myTopnav" style="background-color:radial-gradient(rgba(255, 252, 252, 0.6),rgba(0,0,0,0));color:azure;height: 144px;font-size:20px;width:100%;display:flex;justify-content:space-evenly;align-items:center">
+    <img src="static/il_fullxfull.2240394309_otqr.webp" style="height:72px;left:0px">
+    <h2 style="top:0px;left:144px">Wolff Parkinson White Syndrome</h2>
+       <a  href='index'> <button style="background-color:rgba(0, 0, 0, 0.0);color:rgb(255, 255, 255);height:50px;width:50px;font-size: medium;border:none"><b>Test</b></button></a>
+       <a  href='sy'>  <button  style="background-color:rgba(0, 0, 0, 0.0);color:rgb(255, 255, 255);height:50px;width:95px;font-size: medium;border:none"><b>Symptoms</b></button></a>
+       <a  href='ce'> <button   style="background-color:rgba(0, 0, 0, 0.0);color:rgb(255, 255, 255);height:50px;width:160px;font-size: medium;border:none"><b>Medical Centres</b></button></a>
+       <a  href='Tr'> <button   style="background-color:rgba(0, 0, 0, 0.0);color:rgb(255, 255, 255);height:50px;width:120px;font-size: medium;border:none"><b>Treatment</b></button></a>
+  </div>
+<section class="page-section" id="Symptoms">
+<div class="d:flex bg:white/.1 b:1;white/.1 p:10 r:10 bd:blur(2)" style="padding-top: 10px;height: fit-content;" id="b" style="color:#f1f1f1;">
+  <div class="box"> 
+  <h1>Symptoms</h1>
+  <h5>If you have WPW syndrome, you may experience episodes where your heart suddenly starts racing, <br>before stopping or slowing down abruptly.This rapid heart rate is called supraventricular tachycardia (SVT).</h3>
+  <h3>During an episode, you may experience symptoms such as:</h3>
+  <p>-a pounding or fluttering heartbeat (<a style="color: #f1f1f1;" href="https://www.nhs.uk/conditions/heart-palpitations/">heart palpitations</a>)<br><br>
+  -feeling <a style="color: #f1f1f1;" href="https://www.nhs.uk/conditions/dizziness/">lightheaded or dizzy</a><br><br>
+  -<a  style="color: #f1f1f1;" href="https://www.nhs.uk/conditions/shortness-of-breath/">shortness of breath</a><br><br>
+  -<a style ="color:#f1f1f1"href="https://www.nhs.uk/conditions/chest-pain/">chest pain</a><br><br>
+  -passing out (<a style="color: #f1f1f1;" href="https://www.nhs.uk/conditions/fainting/">fainting</a>)<br><br>
+  <h2 style="color:red">These episodes can last for seconds, minutes or hours.</h2>
+  </p>
+  </div>
+		<div class="box" style="width:500px;height:550px">
+				<center><h1>Do u need an ECG ?</h1></center>  
+        <form method="post" action="sy"> 
+				<div><label for="name">Enter your Heartrate (no. of beats per minute):</label>
+					<input type="text" id="name" name="name" required
+						   minlength="0" maxlength="8" size="10"></div>
+				<div><label for="name">Do you experience chest pains on the regular ?</label>
+          <br>
+          <br>
+            <input type="radio" id="cp1" name="Chest Pain" value="1">
+            <label for="cp1" style="padding-right:150px;">Yes</label>
+            <input type="radio" id="cp2" name="Chest Pain" value="0" >
+            <label for="cp2">No</label>
+				</div>
+        <br>
+				<div><label for="name">Do u experience difficulty breathing ?</label>
+          <br>
+          <br>
+            <input type="radio" id="db1" name="breath" value="1">
+            <label for="db1" style="padding-right:150px;">Yes</label>
+            <input type="radio" id="db2" name="Breath" value="0" >
+            <label for="db2">No</label>
+				</div>
+        <br>
+				<div><label for="name">Do u often get dizzy ?</label>
+          <br>
+          <br>
+              <input type="radio" id="di1" name="Dizzy" value="1">
+              <label for="di1" style="padding-right:150px;">Yes</label>
+              <input type="radio" id="di2" name="Dizzy" value="0" >
+              <label for="di2">No</label>
+          </div>
+        <br>
+				<div><label for="name">Do u faint often ?</label>
+          <div>
+              <input type="radio" id="fn1" name="Faint" value="1">
+              <label for="fn1" style="padding-right:150px;">Yes</label>
+              <input type="radio" id="fn2" name="Faint" value="0" >
+              <label for="fn2">No</label>
+          </div>
+				</div>
+        <br>
+				<div><label for="name">Do you constantly feel tired ?</label>
+          <br>
+          <br>
+            <input type="radio" id="ft1" name="Fatigue" value="1">
+            <label for="ft1" style="padding-right:150px;">Yes</label>
+            <input type="radio" id="ft2" name="Fatigue" value="0" >
+            <label for="ft2">No</label>
+				</div>
+        <br>
+				<div><label for="name">Are u always anxious ?</label>
+          <br>
+          <br>
+            <input type="radio" id="an1" name="Anxious" value="1">
+            <label for="an1" style="padding-right:150px;">Yes</label>
+            <input type="radio" id="an2" name="Anxious" value="0" >
+            <label for="an2">No</label>
+				</div>
+        	<button  type ="submit" class="
+					bg:black/.3 bg:black/.15:hover ls:2p:15 b:1;solid;white/.1 r:10 inline-block font:serif bd:blur(30) font:14" style="color:#f1f1f1;right:40px;position: absolute;height: 30px;">
+			DETECT
+	</button>
+        </form>
+		<div class="box" style="position:absolute;bottom:50px;right:60%">
+      <h1 style="color:yellow">{{ pred }}</h1>
+    </div>
+		<div> 
+</section>
+</div>
+</body>
+</html>
+    
